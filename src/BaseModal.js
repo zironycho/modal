@@ -46,9 +46,13 @@ export default {
       this.show = true
     },
 
-    deactive () {
+    deactiveWeak () {
       if(this.closable)
         this.show = false
+    },
+
+    deactive () {
+      this.show = false
     }
   },
 

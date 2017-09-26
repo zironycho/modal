@@ -12,7 +12,7 @@
     @afterLeave="afterLeave"
   >
     <div :class="classes" v-if="show">
-      <div class="modal-background" @click="deactive"></div>
+      <div class="modal-background" @click="deactiveWeak"></div>
       <div class="modal-content">
         <slot></slot>
       </div>

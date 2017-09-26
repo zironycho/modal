@@ -12,7 +12,7 @@
     @afterLeave="afterLeave"
   >
     <div :class="classes" v-if="show">
-      <div class="modal-background" @click="deactive"></div>
+      <div class="modal-background" @click="deactiveWeak"></div>
       <div class="modal-card">
         <header class="modal-card-head">
           <slot name="header">
@@ -25,8 +25,8 @@
         </section>
         <footer class="modal-card-foot">
           <slot name="footer">
-            <a class="button is-primary" @click="ok">{{ okText }}</a>
-            <a class="button" @click="cancel">{{ cancelText }}</a>
+            <a class="button is-primary" @click="ok" v-show="okText">{{ okText }}</a>
+            <a class="button" @click="cancel" v-show="cancelText">{{ cancelText }}</a>
           </slot>
         </footer>
       </div>
