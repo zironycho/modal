@@ -3,6 +3,7 @@
 Modal component for Vue Bulma.
 
 
+
 ## Installation
 
 ```
